@@ -1,8 +1,13 @@
 import { View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { COLORS, SIZES, SHADOWS, assets } from "../constants";
-import { LikeButton, RectButton } from "../components";
-import { SubInfo, EthPrice, NFTTitle } from "./SubInfo";
+import {
+  LikeButton,
+  BidButton,
+  SubInfo,
+  EthPrice,
+  NFTTitle,
+} from "../components";
 
 export const NFTCard = ({ data }) => {
   const navigation = useNavigation();
@@ -52,7 +57,7 @@ export const NFTCard = ({ data }) => {
           }}
         >
           <EthPrice price={data.price} />
-          <RectButton
+          <BidButton
             minWidth={120}
             fontSize={SIZES.font}
             handlePress={() => navigation.navigate("Details", { data })}
