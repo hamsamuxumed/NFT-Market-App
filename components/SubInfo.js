@@ -21,7 +21,7 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
           color: COLORS.primary,
         }}
       >
-        by-{subTitle}
+        {subTitle}
       </Text>
     </View>
   );
